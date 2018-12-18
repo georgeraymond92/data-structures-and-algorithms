@@ -21,6 +21,10 @@ const reverseArray = (arr) => {
     return reverse;
 }
 
+function reverse2(arr) {
+    
+}
+
 console.log("expect [3,2,1]: " + reverseArray(test1));
 console.log("expect []: " + reverseArray(test2));
 console.log("expect 'not an array': " + reverseArray(test3));
