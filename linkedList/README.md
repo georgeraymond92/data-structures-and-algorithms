@@ -1,44 +1,11 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# Singly Linked List
+<!-- Short summary or background information -->
 
-## Project Name
+## Challenge
+I created a linked list constructor. this list object has various methods built into it. there is the includes method that will check and see if a value exists in your linked list. the insert method will add a new node to the end of the linked list. the print method prints out all of the head nodes contained within the list.
 
-### Author: Student/Group Name
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-### Links and Resources
-
-
-[![Build Status](https://www.travis-ci.com/georgeraymond92/00-deployment.svg?branch=master)](https://www.travis-ci.com/georgeraymond92/00-deployment)
-* [repo](https://github.com/georgeraymond92/00-deployment)
-* [travis](https://www.travis-ci.com/georgeraymond92/00-deployment)
-* [heroku](https://calm-stream-68720.herokuapp.com/)
-
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
-
-### Setup
-#### `.env` requirements
-* `PORT` - Port is defined in the environment
-* `MONGODB_URI` - URL to the running mongo instance/db
-
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+## API
+<!-- Description of each method publicly available to your Linked List -->
