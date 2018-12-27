@@ -32,7 +32,6 @@ class LinkedList {
     }else if( ! current.next && current.node !== value){
       return false;
     }
-    
   }
   list() {
     let current = this.head;
@@ -41,6 +40,7 @@ class LinkedList {
       current = current.next;
     }
     console.log(current.node);
+    return true;
   }
   insertBefore(newVal,val){
     let node = new Node(newVal);
