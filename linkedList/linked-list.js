@@ -2,7 +2,6 @@
 
 const Node = require('./class/Node');
 
-
 class LinkedList {
   constructor(){
     this.head = null;
@@ -43,8 +42,36 @@ class LinkedList {
     }
     console.log(current.node);
   }
+  insertBefore(newVal,val){
+    let node = new Node(newVal);
+    let current = this.head;
+    while(current.next){
+      if( current.next.node === val){
+        node.next = current.next;
+        current.next = node;
+        return;
+      }
+      current = current.next;
+
+    }
+    current = current.next;
+  }
+
+  insertAfter(newVal,val){
+    let node = new Node(newVal);
+    let current = this.head;
+    while(current.next){
+      if (current.node === val){
+        node.next =current.next;
+        current.next = node;
+      }
+      current = current.next;
+    }
+    current = current.next;
+  }
 }
 
 let list = new LinkedList;
+
 
 module.exports = list;
