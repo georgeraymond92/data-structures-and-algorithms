@@ -29,15 +29,14 @@ class LinkedList {
     let current = this.head;
     while(current.next){
       if(current.node === value){
-        console.log('true');
-        break;
+        return true;
       }
       current = current.next;
     }
     if(current.node === value && ! current.next){
-      console.log('true');
+      return true;
     }else if( ! current.next && current.node !== value){
-      console.log('false');
+      return false;
     }
     
   }
@@ -52,12 +51,12 @@ class LinkedList {
 }
 
 let list = new LinkedList;
-list.insert('George');
-list.insert('yeti');
-list.insert('peter');
-list.insert('chill');
-list.insert('buns');
-list.insert('cheese');
+// list.insert('George');
+// list.insert('yeti');
+// list.insert('peter');
+// list.insert('chill');
+// list.insert('buns');
+// list.insert('cheese');
 // list.includes('grape');
 // list.includes('yeti');
 // list.includes('grape');
@@ -65,6 +64,7 @@ list.insert('cheese');
 // list.includes('big taco');
 // list.includes('cheese');
 // list.includes('buns');
-list.list();
-
+// list.list();
+console.log(list);
+module.exports = list;
 // console.log(util.inspect(list,{depth:10}));
