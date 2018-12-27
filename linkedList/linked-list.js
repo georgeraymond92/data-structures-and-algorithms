@@ -1,16 +1,11 @@
 'use strict';
 
-class Node {
-  constructor(value){
-    this.node =value;
-    this.next = null;
-  }
-}
+const Node = require('./class/Node');
+
 
 class LinkedList {
   constructor(){
     this.head = null;
-
   }
   insert(value){
     let node = new Node(value);
