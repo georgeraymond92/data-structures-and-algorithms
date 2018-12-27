@@ -1,16 +1,10 @@
 'use strict';
 
-class Node {
-  constructor(value){
-    this.node =value;
-    this.next = null;
-  }
-}
+const Node = require('./class/Node');
 
 class LinkedList {
   constructor(){
     this.head = null;
-
   }
   insert(value){
     let node = new Node(value);
@@ -38,7 +32,6 @@ class LinkedList {
     }else if( ! current.next && current.node !== value){
       return false;
     }
-    
   }
   list() {
     let current = this.head;
@@ -47,9 +40,38 @@ class LinkedList {
       current = current.next;
     }
     console.log(current.node);
+    return true;
+  }
+  insertBefore(newVal,val){
+    let node = new Node(newVal);
+    let current = this.head;
+    while(current.next){
+      if( current.next.node === val){
+        node.next = current.next;
+        current.next = node;
+        return;
+      }
+      current = current.next;
+
+    }
+    current = current.next;
+  }
+
+  insertAfter(newVal,val){
+    let node = new Node(newVal);
+    let current = this.head;
+    while(current.next){
+      if (current.node === val){
+        node.next =current.next;
+        current.next = node;
+      }
+      current = current.next;
+    }
+    current = current.next;
   }
 }
 
 let list = new LinkedList;
+
 
 module.exports = list;
