@@ -41,6 +41,7 @@ class LinkedList {
     }
     console.log(current.node);
     return true;
+
   }
   insertBefore(newVal,val){
     let node = new Node(newVal);
@@ -69,9 +70,31 @@ class LinkedList {
     }
     current = current.next;
   }
+
+  kFromEnd(k){
+    let nodeArr = [];
+    let current = this.head;
+    while(current.next) {
+      nodeArr.push(current.node);
+      // console.log(current.node);
+      current = current.next;
+    }
+    nodeArr.push(current.node);
+    console.log(nodeArr);
+    return nodeArr[nodeArr.length - (k+1)];
+  }
 }
 
 let list = new LinkedList;
 
+list.insert('peter');
+list.insert('bill');
+list.insert('joe');
+list.insert('sam');
+list.insert('sally');
+
+list.list();
+
+console.log(list.kFromEnd(2));
 
 module.exports = list;
