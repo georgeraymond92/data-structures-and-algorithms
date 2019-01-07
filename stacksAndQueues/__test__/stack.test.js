@@ -1,6 +1,6 @@
 'use strict';
 
-const Stack = require('../stack/stack');
+const Stack = require('../stacks-and-queues');
 
 describe('stack', () => {
 
