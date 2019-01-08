@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1546846792550" clover="3.2.0">
+  <project timestamp="1546846792550" name="All files">
+    <metrics statements="14" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4" elements="22" coveredelements="13" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1">
+      <file name="stacks-and-queues.js" path="/Users/georgeraymond/Desktop/code.../codefellows/data-structures-and-algorithms/stacksAndQueues/stacks-and-queues.js">
+        <metrics statements="14" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>
