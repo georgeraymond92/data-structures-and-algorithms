@@ -1,48 +1,119 @@
 'use strict';
 
-class Queue {
-  constructor() {
-    this.q = new Array();
-    this.front = null;
+
+class Node {
+
+  constructor(value){
+    this.value = value;
+    this.next = null;
   }
 
-  peek() {
-    return this.front;
-  }
-
-  enqueue(value) {
-    // puts value on the rear of the queue
-    this.q.push(value)
-  }
-  dequeue() {
-    // removes the first value of the queue
-    this.q.shift()
-  }
-  
 }
 
+
 class Stack {
-  constructor() {
-    this.stack = new Array();
+
+  constructor(){
     this.top = null;
   }
 
-  push(value) {
-    this.stack.unshift(value);
-    this.top = value;
+  push(value){
+
+    let node = new Node(value);
+
+    if (!this.top){
+      this.top = node;
+      return;
+    }
+
+    node.next = this.top;
+    this.top = node;
+
   }
 
-  pop() {
-    let value = this.stack.shift();
-    this.top = this.stack[0];
-    return value;
+  pop(){
+    
+    if (this.top === null) {
+
+      throw new Error('The Stack is EMPTY!');
+
+    }
+
+    let nodePass = this.top;
+    this.top = this.top.next;
+    return nodePass.value;
+
+  }
+
+  peek(){
+
+    if (this.top === null) {
+
+      throw new Error('NOTHING IN STACK!!');
+
+    }
+
+    return this.top.value;
+
+  }
+}
+
+class Queue {
+
+  constructor(){
+    this.front = null;
+    this.back = null;
+  }
+
+  enqueue(value) {
+
+    const node = new Node(value);
+    
+    if(!this.front){
+
+      this.front = node;
+      this.back = node;
+      return;
+
+    }
+
+    this.back.next = node;
+    this.back = node;
+
+  }
+
+  dequeue() {
+
+    if(this.front === null){
+      throw new Error('Nothing left?!');
+    }
+
+    const dataPass = this.front.value;
+
+    if (!this.front.next){
+
+      this.front = null;
+      this.back = null;
+
+    } else {
+
+      this.front = this.front.next;
+
+    }
+
+    return dataPass;
+    
   }
 
   peek() {
-    return this.top;
+
+    if(this.front === null){
+      throw new Error('Queue Empty');
+    }
+
+    return this.front.value;
+
   }
-
-
 }
 
-module.exports = Stack, Queue;
+module.exports = Node, Stack, Queue;
