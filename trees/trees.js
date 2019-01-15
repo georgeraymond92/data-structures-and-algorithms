@@ -16,52 +16,77 @@ class BinaryTree {
   inOrder() {
     let nodes = [];
     let _walk = (node) => {
-      if(this.left){
-        _walk(this.left);
+
+      if(node.left){
+        _walk(node.left);
       }
-      if(this.right){
-        _walk(this.right);
+      nodes.push(node.value);
+      if(node.right){
+        _walk(node.right);
       }
-      nodes.push(this.value);
+
     }
     _walk(this.root);
-    return nodes
+    return nodes;
   }
 
-
-  
   preOrder() {
     let nodes = [];
     let _walk = (node) => {
-      nodes.push(this.value);
-      if(this.left){
-        _walk(this.left);
+      nodes.push(node.value);
+      if(node.left){
+        _walk(node.left);
       }
-      if(this.right){
-        _walk(this.right);
+      if(node.right){
+        _walk(node.right);
       }
 
     }
     _walk(this.root);
-    return nodes
+    return nodes;
   }
-
 
   postOrder() {
     let nodes = [];
     let _walk = (node) => {
-      if(this.left){
-        _walk(this.left);
-      }
-      nodes.push(this.value);
-      if(this.right){
-        _walk(this.right);
+      if(node.left){
+        _walk(node.left);
+
+      if(node.right){
+        _walk(node.right);
       }
     }
+    nodes.push(node.value);
+    }
     _walk(this.root);
-    return nodes
+    return nodes;
   }
 
-
-
 }
+
+function fizzBuzzTree(tree) {
+  let _walk = (node) => {
+    if(node.left){
+      _walk(node.left)
+    }
+    if(node.right){
+      _walk(node.right)
+    }
+    if(node.value % 15 === 0){
+      node.value = "FizzBuzz";
+    }
+    if(node.value % 3 === 0){
+      node.value = "Fizz";
+    }
+    if(node.value % 5 === 0){
+      node.value = "Buzz";
+    }
+
+  }
+  _walk(tree.root);
+  return tree;
+}
+
+
+
+module.exports = {BinaryTree, fizzBuzzTree, Node};
