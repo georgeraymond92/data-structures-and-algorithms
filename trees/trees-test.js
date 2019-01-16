@@ -5,12 +5,12 @@ const Tree = require('./trees');
 
 let tree = new Tree.BinaryTree();
 
-let a = new Tree.Node('3');
-let b = new Tree.Node('15');
-let c = new Tree.Node('c');
-let d = new Tree.Node('d');
-let e = new Tree.Node('5');
-let f = new Tree.Node('f');
+let a = new Tree.Node(3);
+let b = new Tree.Node(15);
+let c = new Tree.Node(4);
+let d = new Tree.Node(1);
+let e = new Tree.Node(10);
+let f = new Tree.Node(4);
 
 a.left = b;
 a.right= c;
@@ -22,6 +22,7 @@ c.left = f;
 tree.root = a;
 
 console.log(tree.inOrder());
-Tree.fizzBuzzTree(tree);
+// Tree.fizzBuzzTree(tree);
 console.log(tree.inOrder());
-tree.breadthFirst();
+// tree.breadthFirst();
+console.log(`tree max: ${Tree.findMax(tree)}`);
