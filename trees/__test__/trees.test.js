@@ -63,4 +63,25 @@ describe('testing trees.js', () => {
 
   });
 
+  it('it should return the highest integer in the tree', () => {
+    const tree = new Tree.BinaryTree();
+    let a = new Tree.Node(3);
+    let b = new Tree.Node(15);
+    let c = new Tree.Node(2);
+    let d = new Tree.Node(99);
+    let e = new Tree.Node(5);
+    let f = new Tree.Node(35);
+
+    a.left = b;
+    a.right= c;
+    c.left = f;
+    b.left = d;
+    b.right = e;
+    tree.root = a;
+
+
+    expect(Tree.findMax(tree)).toEqual(99);
+
+  });
+
 });
