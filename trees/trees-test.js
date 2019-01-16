@@ -24,3 +24,4 @@ tree.root = a;
 console.log(tree.inOrder());
 Tree.fizzBuzzTree(tree);
 console.log(tree.inOrder());
+tree.breadthFirst();
