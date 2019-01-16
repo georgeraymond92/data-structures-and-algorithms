@@ -10,7 +10,7 @@ class Node {
 
 class BinaryTree {
   constructor(){
-    this.root = null
+    this.root = null;
   }
 
   inOrder() {
@@ -25,7 +25,7 @@ class BinaryTree {
         _walk(node.right);
       }
 
-    }
+    };
     _walk(this.root);
     return nodes;
   }
@@ -41,7 +41,7 @@ class BinaryTree {
         _walk(node.right);
       }
 
-    }
+    };
     _walk(this.root);
     return nodes;
   }
@@ -51,15 +51,29 @@ class BinaryTree {
     let _walk = (node) => {
       if(node.left){
         _walk(node.left);
-
+      }
       if(node.right){
         _walk(node.right);
       }
-    }
-    nodes.push(node.value);
-    }
+      nodes.push(node.value);
+    };
     _walk(this.root);
     return nodes;
+  }
+
+  breadthFirst(){
+    let nodes = [this.root];
+    let c = this.root;
+    while(nodes.length){
+      if(c.left){
+        nodes.push(c.left);
+      }
+      if(c.right){
+        nodes.push(c.right);
+      }
+      console.log(`print:${nodes.shift().value}`);
+      c = nodes[0];
+    }
   }
 
 }
@@ -67,22 +81,22 @@ class BinaryTree {
 function fizzBuzzTree(tree) {
   let _walk = (node) => {
     if(node.left){
-      _walk(node.left)
+      _walk(node.left);
     }
     if(node.right){
-      _walk(node.right)
+      _walk(node.right);
     }
     if(node.value % 15 === 0){
-      node.value = "FizzBuzz";
+      node.value = 'FizzBuzz';
     }
     if(node.value % 3 === 0){
-      node.value = "Fizz";
+      node.value = 'Fizz';
     }
     if(node.value % 5 === 0){
-      node.value = "Buzz";
+      node.value = 'Buzz';
     }
 
-  }
+  };
   _walk(tree.root);
   return tree;
 }
