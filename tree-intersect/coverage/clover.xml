@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1549412251541" clover="3.2.0">
+  <project timestamp="1549412251542" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6" elements="30" coveredelements="30" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1">
+      <file name="tree-intersection.js" path="/Users/georgeraymond/Desktop/code.../codefellows/data-structures-and-algorithms/tree-intersect/tree-intersection.js">
+        <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="26" type="stmt"/>
+        <line num="9" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="12" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="19" count="16" type="stmt"/>
+        <line num="23" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="24" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>
