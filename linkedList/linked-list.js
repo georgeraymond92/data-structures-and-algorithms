@@ -119,4 +119,4 @@ list2.insert('pan');
 // zipList(list, list2);
 // console.log(util.inspect(zipList(list, list2)));
 
-module.exports = list ,  LinkedList;
+module.exports = {list ,  LinkedList};
