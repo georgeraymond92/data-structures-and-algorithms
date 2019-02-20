@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/georgeraymond92/data-structures-and-algorithms#readme",
   "dependencies": {
-    "eslint": "^5.13.0",
-    "jest": "^24.1.0"
+    "eslint": "^5.14.1",
+    "jest": "^23.6.0"
   }
 }
