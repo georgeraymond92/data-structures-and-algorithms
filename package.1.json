@@ -1,0 +1,17 @@
+{
+  "name": "radixsort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "radix.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
